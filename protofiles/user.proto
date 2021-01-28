@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protofiles;
+
+message UserData {
+  string username = 1;
+  string password = 2;
+}
+
+message SessionResponse {
+  string token = 1;
+  string message = 2;
+}
+
+service Login {
+  rpc Login(UserData) returns (SessionResponse) {}
+}
